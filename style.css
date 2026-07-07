@@ -1,0 +1,89 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #050505;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.page { width: 100%; overflow-x: hidden; }
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  background: #000;
+  overflow: hidden;
+}
+.hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  animation: cinematicZoom 16s ease-out forwards;
+  transform-origin: center center;
+}
+@keyframes cinematicZoom {
+  from { transform: scale(1.012); filter: brightness(.96); }
+  to { transform: scale(1); filter: brightness(1); }
+}
+.hotspot {
+  position: absolute;
+  display: block;
+  z-index: 5;
+  border-radius: 6px;
+}
+.hotspot:focus-visible {
+  outline: 2px solid #d9a429;
+  outline-offset: 2px;
+}
+/* Coordinate percentuali basate sull'anteprima 1536x1024 */
+.home { left: 1.4%; top: 3.9%; width: 4.5%; height: 5.4%; }
+.chi-siamo { left: 8.0%; top: 3.9%; width: 8.0%; height: 5.4%; }
+.servizi { left: 17.0%; top: 3.9%; width: 7.0%; height: 5.4%; }
+.progetti { left: 24.0%; top: 3.9%; width: 8.0%; height: 5.4%; }
+.perche { left: 32.0%; top: 3.9%; width: 13.0%; height: 5.4%; }
+.contatti { left: 45.0%; top: 3.9%; width: 8.0%; height: 5.4%; }
+.telefono { left: 58.5%; top: 1.9%; width: 17.2%; height: 7.2%; }
+.preventivo { left: 3.8%; top: 72.7%; width: 20.0%; height: 7.2%; }
+.whatsapp { left: 24.8%; top: 72.7%; width: 16.2%; height: 7.2%; }
+.hotspot.preventivo:hover,
+.hotspot.whatsapp:hover,
+.hotspot.telefono:hover { box-shadow: 0 0 30px rgba(217,164,41,.35); }
+.content-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 24px;
+  border-top: 1px solid rgba(217,164,41,.25);
+  background: #070707;
+}
+.content-section h1 {
+  margin: 0 0 16px;
+  color: #d9a429;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.content-section p {
+  margin: 0;
+  line-height: 1.7;
+  color: #e8e8e8;
+  font-size: 18px;
+}
+.content-section a { color: #d9a429; }
+@media (max-width: 900px) {
+  .hero {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .hero-image {
+    width: 1180px;
+    max-width: none;
+  }
+  .hotspot { transform-origin: top left; }
+  /* mantiene cliccabili le aree anche se l'immagine viene visualizzata più larga */
+  .content-section { padding: 46px 20px; }
+  .content-section p { font-size: 16px; }
+}
+@media (max-width: 560px) {
+  .hero-image { width: 980px; }
+  .content-section { padding: 38px 18px; }
+}
