@@ -1,1 +1,0 @@
-// Billitteri Group - homepage responsive
