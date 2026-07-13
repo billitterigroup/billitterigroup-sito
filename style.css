@@ -1,0 +1,25 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; width: 100%; min-height: 100%; background: #050505; }
+body { overflow-x: hidden; font-family: Arial, Helvetica, sans-serif; }
+.site-stage { position: relative; width: 100%; margin: 0; padding: 0; line-height: 0; background: #050505; }
+.site-image { display: block; width: 100%; height: auto; margin: 0; padding: 0; }
+.hotspot { position: absolute; display: block; z-index: 10; border-radius: 10px; background: transparent; }
+.hotspot:focus-visible { outline: 3px solid #d7a33a; outline-offset: 3px; }
+.mobile-only { display: none; }
+.desktop-only { display: block; }
+/* coordinate percentuali sulla grafica desktop 1536x1024 */
+.quote { left: 11.6%; top: 54.3%; width: 16.6%; height: 5.4%; }
+.whatsapp { left: 29.3%; top: 54.3%; width: 11.7%; height: 5.4%; }
+.seo-content { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (max-width: 767px) {
+  body { background: #050505; }
+  .desktop-only { display: none; }
+  .mobile-only { display: block; }
+  .site-stage { max-width: 100%; overflow: hidden; }
+  .site-image { width: 100vw; max-width: 100%; height: auto; }
+  /* coordinate percentuali sulla grafica mobile 941x1672 */
+  .quote-mobile { left: 25.6%; top: 25.2%; width: 48.1%; height: 4.7%; }
+  .whatsapp-mobile { left: 25.7%; top: 29.6%; width: 48.0%; height: 4.7%; }
+  .phone-mobile { left: 35.0%; top: 84.4%; width: 22.0%; height: 4.0%; }
+  .email-mobile { left: 56.0%; top: 84.4%; width: 28.0%; height: 4.0%; }
+}
